@@ -1,4 +1,4 @@
-# DECODE ET
+# DecodET
 
 ## setting up git
 
