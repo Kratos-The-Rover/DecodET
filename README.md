@@ -24,19 +24,28 @@ MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQT
 
 Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
-## NetSurfP-2.0: The Baseline
+## NetSurfP-2.0: The Baseline model
 The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674)'s model architecture is based on Bi-directional LSTM. NetSurfP-2.0 implements the blossom matrix for feature extraction from the sequence of amino acids. But recent progress in the field of Natural Language Processing like Google's BERT has opened up better ways to extract features. 
 
-## DecodETv0.1: The plan
+## DecodETv0.1
 
-[BERTology Meets Biology](https://arxiv.org/abs/2006.15222), a recent (2019) paper used BERT models to get the encoding for each amino acids and it was shown to be similar to the BLOSSOM matrix. Read the paper for better understanding. 
-Hence the pre trained data for creating the sentence encoding for each amino acid is provided in the TAPE paper and we use the pretrained BERT model for creating the encoding of the amino acid sequence and implement a model for classifying it into the secondary structures 
-<a href="https://arxiv.org/abs/1906.08230">TAPE</a>
-
-We will be classifying parts of a protein sequence into 3 secondary structures:
+Task is to classify sections a protein sequence into 3 secondary structures:
 - H = 4-turn helix (α helix). Minimum length 4 residues.
 - E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
 - C = coil (residues which are not in any of the above conformations).
+
+Example (Corresponding result for the above sequence): 
+```
+CCCCHHHHHHHHHHHHHHHHHHHHHHHCEEECCCCCEEECCCCCCCCCCCCCCCCEECCCCCCCCCEEECCCCCCHHHHHHHHCCCCCCCEEEEEEEEECCCCCCCCCCCCCEEEEEEEEEECCCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHCCCCCCCCCCCEEEEHHHHHHHCCCCCHHHHHHHHHHHHCEEEEECCCCCCCCCCCCCCCCCCCECCCCECCCCCECCEEEEEEEECCCCEEEEEEEEEEECCHHHHHHHHHHHCCCCHHHCHHHHHHHCCCCCCEEEEEEEHHHHHHHHHCCCCHHHCCCCCCCHHHHHHCCCCC
+```
+
+### Inspiration from previous work:
+
+[BERTology Meets Biology](https://arxiv.org/abs/2006.15222), [NetSurfP-2.0](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674) and [Evaluating Protein Transfer Learning with TAPE](https://arxiv.org/abs/1906.08230) have implemented Transformers and Bi-Directional LSTMs for the classification task. For v1, we will be taking a lot of inspiration from these papers and come up with a combination of them. We will be taking the [NetSurfP-2.0](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674) as our baseline.
+
+
+You have the choice to help improve our model and help fix issues. We would rather have you work on novel models (not limiting to NLP) and compete with our model! We will be updating pending work, issues on our model soon. Meanwhile, it is up to you to find more papers and models. Novel models are most welcome. 
+
   
 ##  Dataset
 
@@ -58,4 +67,4 @@ We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](
  [67] ASA_max
 ```
 
-We have prepared a starter kit on [colab](https://colab.research.google.com/drive/1Q0hEDSUQ9fFytPF6qWxGzfLkC-BJQv1I?usp=sharing#scrollTo=LNBsiy8e0Ci9&uniqifier=1) to get started. 
+We have prepared a starter kit on [Colab](https://colab.research.google.com/drive/1Q0hEDSUQ9fFytPF6qWxGzfLkC-BJQv1I?usp=sharing#scrollTo=LNBsiy8e0Ci9&uniqifier=1) to get started quickly with the dataset. 
