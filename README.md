@@ -2,6 +2,7 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be by computational biologists</I>
 # DecodET: The protein structure generator
+In collaboration with Symbionts, Dept. of Biological Sciences, BITS Goa and SAiDL (Society for Artificial Intelligence and Deep Learning)
 
 ## Problem statement
 Protein sequencing is relatively much easier and cheaper to perform due to new technologies. But, with just a sequence we won't be able to determine the function of a protein. Protein structure determination is almost a necessary step in finding its function and even to engineer new proteins for varous applications. Several methods are currently used to determine the 3D structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. Enter, Computational Biology and Machine learning. We need to build a Deep Learning model which takes a protein sequence (fasta format, see below) and gives a 3D structure (with coordinates of each amino acid in the protein, angles between the bonds, etc.
