@@ -24,13 +24,8 @@ MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQT
 
 Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
-##  Dataset
-<hr>
-
-So for the current project we aim to ouput the secondary structure of the protein depending on the amino acid sequence.So for the problem we are currently using the dataset from the DTU bioinformatics institute<br>
-<a href="http://www.cbs.dtu.dk/services/NetSurfP/">Train data</a>
+## NetSurfP-2.0
 the model architecutre was based on the bi directional LSTM and for more information do read the paper
-<a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674">NETSURF2.0</a>
 Morever the NETSURF implements the blossom matrix for feature extraction from the sequence of amino acids.But recent progress in the field of Natural Language Processing has enabled us to get the same results using BERT Models.A recent 2019 paper using BERT models to get the encoding for each amino acids and it was shown to be similar to the BLOSSOM matrix 
 <a href="https://arxiv.org/abs/2006.15222">BERTOLOGY</a>
 Hence the pre trained data for creating the sentence encoding for each amino acid is provided in the TAPE paper and we use the pretrained BERT model for creating the encoding of the amino acid sequence and implement a model for classifying it into the secondary structures 
@@ -41,12 +36,11 @@ The 3 main secondary structures used for classification are :
 <li> C = coil (residues which are not in any of the above conformations).
   
 
- 
-## IMPLEMENTATION
 
-<hr>
+##  Dataset
 
-The raw data format was downloaded for training and it consists of data.npy and pdbids.npy ,data.npy has the one for encoding for the amino acids and the secondary structures.<br>
+We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](http://www.cbs.dtu.dk/services/NetSurfP/). The training set is represented this way: Raw data is given in Numpy (Python) compressed files with an array of pdb/chain ids (pdbids) and a 3-dimensional array (of shape ```(10848, 1632, 68)```) of input and output features. First dimension is protein samples, second dimension is sequence position and third dimension is input features. There are ```10848``` different protein sequences and largest sequence is ```1632``` amino acids long. And, each amino acid has the following data:
+
 ```
  [0:20] Amino Acids (sparse encoding)
  Unknown residues are stored as an all-zero vector
@@ -62,11 +56,10 @@ The raw data format was downloaded for training and it consists of data.npy and 
  [65:67] Phi+Psi
  [67] ASA_max
 ```
-The code for converting it into the amino acid FASTA format along with the secondary structure has been provided in a collab file.<br>
-The input for the bert encoding of the amino acids is basically a FASTA FORMAT
-```
-MGAEEEDTAILYPFTISGNDRNGNFTINFKGTPNSTNNGCIGYSYNGDWEKIEWEGSCDGNGNLVVEVPMSKIPAGVTSGEIQIWWHSGDLKMTDYKALEHHHHHH
-```
+
+## IMPLEMENTATION
+
+
 The code for encoding is 
 ```
 $ pip install tape_proteins
