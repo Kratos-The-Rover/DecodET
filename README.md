@@ -1,6 +1,7 @@
 
 ![](https://github.com/songlab-cal/tape/workflows/Build/badge.svg)
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)
+<I> The next revolution in biology will be due to computer scientists and not biologists </I>
 # DecodET
 <hr>
 
@@ -21,7 +22,12 @@ Amino acids play central roles both as building blocks of proteins and as interm
 Each amino acid is encoded as a single letter which can be referred from the image given
 <center><img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Image" height="500" width="500"></center>
 For more information realted to amino acids and proteins refer to the below links
-<a href="https://arxiv.org/abs/1906.08230">What is a protein</a>
+<a href="https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be">Protein folding problem</a>
+
+<a href="https://youtu.be/cAJQbSLlonI">Protein and machine learning</a>
+
+<a href="https://www.youtube.com/watch?v=q6Kyvy1zLwQ">BERT meets biology</a>
+
 ##  DESCRIPTION
 <hr>
 
