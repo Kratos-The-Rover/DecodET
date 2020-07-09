@@ -29,6 +29,8 @@ The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25
 
 ## DecodETv0.1
 
+<center>![img](str.png)</center>
+
 Task is to classify sections a protein sequence into 3 secondary structures:
 - H = 4-turn helix (α helix). Minimum length 4 residues.
 - E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
