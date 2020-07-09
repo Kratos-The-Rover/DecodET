@@ -16,11 +16,12 @@ git push --set-upstream origin master
 
 ```
 ## BIO F111 
-The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–7secondary structure, backbone geometry, and disorder.<br>
-Amino acids play central roles both as building blocks of proteins and as intermediates in metabolism. The 20 amino acids that are found within proteins convey a vast array of chemical versatility. Tertiary Structure of a proteinThe precise amino acid content, and the sequence of those amino acids, of a specific protein, is determined by the sequence of the bases in the gene that encodes that protein.<br>
+The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
+Amino acids play central roles both as building blocks of proteins and as intermediates in metabolism. The 20 amino acids that are found within proteins convey a vast array of information.<br>
 Each amino acid is encoded as a single letter which can be referred from the image given
 <center><img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Image" height="500" width="500"></center>
-
+For more information realted to amino acids and proteins refer to the below links
+<a href="https://arxiv.org/abs/1906.08230">What is a protein</a>
 ##  DESCRIPTION
 <hr>
 
