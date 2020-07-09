@@ -5,18 +5,7 @@
 # DecodET
 <hr>
 
-## setting up git
-
-```
-
-git init
-git add <file>
-git commit -m "message"
-git remote add origin <link or ssh>
-git push --set-upstream origin master
-
-```
-## BIO F111 
+## BIO F111: A 60 minute crash course to get up to speed
 The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
 Amino acids play central roles both as building blocks of proteins and as intermediates in metabolism. The 20 amino acids that are found within proteins convey a vast array of information.<br>
 Each amino acid is encoded as a single letter which can be referred from the image given
@@ -105,3 +94,18 @@ CCCCCCCCCEEEEEECCCCCCCCEEEEEEEECCCCEEEEEEEEEECCEEEEEEEEEECCCCCEEEEEEEHHHCCCCCCEE
 ```
 <hr>
 <I>MAY THE BEST MODEL WIN <I>
+
+
+
+
+## Git setup cheatcode
+
+```
+
+git init
+git add <file>
+git commit -m "message"
+git remote add origin <link or ssh>
+git push --set-upstream origin master
+
+```
