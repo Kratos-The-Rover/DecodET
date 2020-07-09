@@ -19,7 +19,7 @@ git push --set-upstream origin master
 The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–7secondary structure, backbone geometry, and disorder.<br>
 Amino acids play central roles both as building blocks of proteins and as intermediates in metabolism. The 20 amino acids that are found within proteins convey a vast array of chemical versatility. Tertiary Structure of a proteinThe precise amino acid content, and the sequence of those amino acids, of a specific protein, is determined by the sequence of the bases in the gene that encodes that protein.<br>
 Each amino acid is encoded as a single letter which can be referred from the image given
-<img src= "https://s3.amazonaws.com/tinycards/image/b2800b0dcd6981c18669c8874bbbebd9">
+<img src= "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftinycards.duolingo.com%2Fdecks%2F5uSD2spk%2Famino-acid-single-letter-code&psig=AOvVaw34Q9ivrVA-k9e4lnARqYMy&ust=1594405424657000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKDTnZrlwOoCFQAAAAAdAAAAABAD">
 
 ##  DESCRIPTION
 <hr>
