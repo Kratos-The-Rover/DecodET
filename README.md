@@ -28,8 +28,9 @@ Several methods are currently used to determine the structure of a protein, incl
 The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674)'s model architecture is based on Bi-directional LSTM. NetSurfP-2.0 implements the blossom matrix for feature extraction from the sequence of amino acids. But recent progress in the field of Natural Language Processing like Google's BERT has opened up better ways to extract features. 
 
 ## DecodETv0.1
-
-<center>![img](https://github.com/Kratos-The-Rover/DecodET/blob/master/str.PNG)</center>
+<p align="center">
+<img src= "https://github.com/Kratos-The-Rover/DecodET/blob/master/str.PNG" alt="Amino acid codes" width=300>
+</p><br>
 
 Task is to classify sections a protein sequence into 3 secondary structures:
 - H = 4-turn helix (α helix). Minimum length 4 residues.
