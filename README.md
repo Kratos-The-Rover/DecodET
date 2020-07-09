@@ -33,10 +33,10 @@ The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25
 Hence the pre trained data for creating the sentence encoding for each amino acid is provided in the TAPE paper and we use the pretrained BERT model for creating the encoding of the amino acid sequence and implement a model for classifying it into the secondary structures 
 <a href="https://arxiv.org/abs/1906.08230">TAPE</a>
 
-The 3 main secondary structures used for classification are:
-<li> H = 4-turn helix (α helix). Minimum length 4 residues.
-<li> E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
-<li> C = coil (residues which are not in any of the above conformations).
+We will be classifying parts of a protein sequence into 3 secondary structures:
+- H = 4-turn helix (α helix). Minimum length 4 residues.
+- E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
+- C = coil (residues which are not in any of the above conformations).
   
 ##  Dataset
 
@@ -53,36 +53,9 @@ We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](
  [54] ASA (complexed)
  [55] RSA (isolated)
  [56] RSA (complexed)
- [57:65] Q8 GHIBESTC (Q8 -> Q3: HHHEECCC)  ## We are replacing the different types of helices, Beta sheets from the OG dataset with just 3 classes - Helix, Beta sheet and Turn 
+ [57:65] Q8 GHIBESTC (Q8 -> Q3: HHHEECCC)  ## We are replacing the different types of helices, Beta sheets from the OG dataset with just 3 classes - Helix, Beta sheet and Coil 
  [65:67] Phi+Psi
  [67] ASA_max
 ```
 
-## IMPLEMENTATION
-
-
-The code for encoding is 
-```
-$ pip install tape_proteins
-```
-
-```
-import torch
-from tape import ProteinBertModel, TAPETokenizer
-model = ProteinBertModel.from_pretrained('bert-base')
-tokenizer = TAPETokenizer(vocab='iupac')  # iupac is the vocab for TAPE models, use unirep for the UniRep model
-
-# Pfam Family: Hexapep, Clan: CL0536
-sequence = 'GCTVEDRCLIGMGAILLNGCVIGSGSLVAAGALITQ'
-token_ids = torch.tensor([tokenizer.encode(sequence)])
-output = model(token_ids)
-sequence_output = output[0]
-pooled_output = output[1]
-
-# NOTE: pooled_output is *not* trained for the transformer, do not use
-# w/o fine-tuning. A better option for now is to simply take a mean of
-# the sequence output
-
-```
-and it returns a 768 vectore which should then be passes into a model classifier which has 3 classes H,E and C
-it should predict the secondary structure for each of the amino acids.For example the secondary structure for each of the amino acids given above are
+We have prepared a starter kit on [colab](https://colab.research.google.com/drive/1Q0hEDSUQ9fFytPF6qWxGzfLkC-BJQv1I?usp=sharing#scrollTo=LNBsiy8e0Ci9&uniqifier=1) to get started. 
