@@ -1,4 +1,5 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status](https://travis-ci.org/ERC-BPGC/gennav.svg?branch=master)](https://travis-ci.org/ERC-BPGC/gennav)
+[![License: TAPE](https://github.com/songlab-cal/tape/workflows/Build/badge.svg
+[![dataset](http://www.cbs.dtu.dk/services/NetSurfP/)
 # DecodET
 
 ## setting up git
