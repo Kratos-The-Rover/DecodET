@@ -1,7 +1,6 @@
 
 ![](https://github.com/songlab-cal/tape/workflows/Build/badge.svg)
-![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
-![maintained](http://img.shields.io/badge/status-unmaintained-red.png)<br>
+![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-red.png)<br>
 <I> The next revolution in biology will be due to computer scientists and not biologists </I>
 # DecodET
 <hr>
