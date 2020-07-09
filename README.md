@@ -1,7 +1,7 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-red.png)<br>
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
-<I> The next revolution in biology will be due to computer scientists and not biologists </I>
-# DecodET
+<I> The next revolution in biology will be by computational biologists</I>
+# DecodET: The protein structure predictor
 <hr>
   
 ## BIO F111: A 5 minute crash course to get you up to speed
