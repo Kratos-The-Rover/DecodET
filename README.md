@@ -3,6 +3,7 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)
 # DecodET
 <hr>
+
 ## setting up git
 
 ```
@@ -15,7 +16,9 @@ git push --set-upstream origin master
 
 ```
 <hr>
-## DESCRIPTION
+
+##  DESCRIPTION
+
 <hr>
 The protein structure prediction problem is the problem of determining the native structure of a protein, given its sequence of amino acids.<br>
 So for the current project we aim to ouput the secondary structure of the protein depending on the amino acid sequence.So for the problem we are currently using the dataset from the DTU bioinformatics institute<br>
@@ -39,7 +42,9 @@ The 3 main secondary structures used for classification are :
  implement a model which would provide good accuracy for converting the amino acid sequence into their respective secondary structures.
  
 <hr>
+
 ## IMPLEMENTATION
+
 <hr>
 
 The raw data format was downloaded for training and it consists of data.npy and pdbids.npy ,data.npy has the one for encoding for the amino acids and the secondary structures.<br>
