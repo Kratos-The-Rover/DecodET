@@ -3,8 +3,8 @@
 <I> The next revolution in biology will be by computational biologists</I>
 # DecodET: The protein structure predictor
 
- ## Problem statement
- Implement a model which would provide good accuracy for converting the amino acid sequence into their respective secondary structures.
+## Problem statement
+Protein sequencing is relatively much easier and cheaper to perform due to new technologies. But, with just a sequence we won't be able to determine the function of a protein. Protein structure determination is almost a necessary step in finding its function and even to engineer new proteins for varous applications. Several methods are currently used to determine the 3D structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. Enter, Computational Biology and Machine learning.
   
 ## BIO F111: A 5 minute crash course to get you up to speed
 
@@ -15,17 +15,15 @@ Amino acids are organic compounds that combine to form proteins. Amino acids and
 </p><br>
 
 Example of an protein sequence with 330 amino acids: 
-```MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGGKLSDGHRHDVRAPDYDDWSTPSELGHAGLNGDILVWNPVLEDAFELSSMGIRVDADTLKHQLALTGDEDRLELEWHQALLRGEMPQTIGGGIGQSRLTMLLLQLPHIGQVQAGVWPAAVRESVPSLL```
+```
+MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGGKLSDGHRHDVRAPDYDDWSTPSELGHAGLNGDILVWNPVLEDAFELSSMGIRVDADTLKHQLALTGDEDRLELEWHQALLRGEMPQTIGGGIGQSRLTMLLLQLPHIGQVQAGVWPAAVRESVPSLL
+```
 
 ### Welcome to the 3D world
 
 <p align="center"><img aligh="left" src= "https://cdn.kastatic.org/ka-perseus-images/71225d815cafcc09102504abdf4e10927283be98.png" alt="Protein Folding" width=300></p>
 
-Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and electron microscopy. They are time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
-
-The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
-
-<br>
+Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
 ##  DESCRIPTION
 <hr>
@@ -97,7 +95,7 @@ and it returns a 768 vectore which should then be passes into a model classifier
 it should predict the secondary structure for each of the amino acids.For example the secondary structure for each of the amino acids given above are
 
 
-## Git setup cheatcode
+### Git setup cheatcode
 
 ```
 
