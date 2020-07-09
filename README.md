@@ -21,7 +21,7 @@ Example of an protein sequence with 330 amino acids:
 
 <p align="center"><img aligh="left" src= "https://cdn.kastatic.org/ka-perseus-images/71225d815cafcc09102504abdf4e10927283be98.png" alt="Protein Folding" width=300></p>
 
-Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve [The protein folding problem TedX](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
+Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and electron microscopy. They are time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
 The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
 
@@ -95,13 +95,6 @@ pooled_output = output[1]
 ```
 and it returns a 768 vectore which should then be passes into a model classifier which has 3 classes H,E and C
 it should predict the secondary structure for each of the amino acids.For example the secondary structure for each of the amino acids given above are
-```
-CCCCCCCCCEEEEEECCCCCCCCEEEEEEEECCCCEEEEEEEEEECCEEEEEEEEEECCCCCEEEEEEEHHHCCCCCCEEEEEEEEECCCEEEEEEEECCEEEECC
-```
-<hr>
-<I>MAY THE BEST MODEL WIN <I>
-
-
 
 
 ## Git setup cheatcode
