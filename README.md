@@ -67,4 +67,4 @@ We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](
  [67] ASA_max
 ```
 
-We have prepared a starter kit on [Colab](https://colab.research.google.com/drive/1Q0hEDSUQ9fFytPF6qWxGzfLkC-BJQv1I?usp=sharing#scrollTo=LNBsiy8e0Ci9&uniqifier=1) to get started quickly with the dataset. 
+We have prepared a starter kit on [Colab](https://colab.research.google.com/drive/1Q0hEDSUQ9fFytPF6qWxGzfLkC-BJQv1I?usp=sharing) to get started quickly with the dataset. 
