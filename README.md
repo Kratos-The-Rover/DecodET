@@ -1,6 +1,5 @@
-
-![](https://github.com/songlab-cal/tape/workflows/Build/badge.svg)
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-red.png)<br>
+![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be due to computer scientists and not biologists </I>
 # DecodET
 <hr>
@@ -8,10 +7,15 @@
 ## BIO F111: A 5 minute crash course to get you up to speed
 
 Amino acids are organic compounds that combine to form proteins. Amino acids and proteins are the building blocks of life. The 20 amino acids that are found within proteins convey a vast array of information. Each amino acid is represented as a single letter as shown below. 
-<center><img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Image" height="500" width="500"></center>
+
+<p align="center">
+<img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Amino acid codes" width=300>
+</p><br>
 
 Example of an protein sequence with 330 amino acids: 
 ```MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGGKLSDGHRHDVRAPDYDDWSTPSELGHAGLNGDILVWNPVLEDAFELSSMGIRVDADTLKHQLALTGDEDRLELEWHQALLRGEMPQTIGGGIGQSRLTMLLLQLPHIGQVQAGVWPAAVRESVPSLL```
+
+<p><img aligh="left" src= "https://cdn.kastatic.org/ka-perseus-images/71225d815cafcc09102504abdf4e10927283be98.png" alt="Protein Folding" width=300></p>
 
 Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology.
 
