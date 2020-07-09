@@ -2,7 +2,9 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be by computational biologists</I>
 # DecodET: The protein structure predictor
-<hr>
+
+ ## PROBLEM STATEMENT
+ Implement a model which would provide good accuracy for converting the amino acid sequence into their respective secondary structures.
   
 ## BIO F111: A 5 minute crash course to get you up to speed
 
@@ -14,6 +16,8 @@ Amino acids are organic compounds that combine to form proteins. Amino acids and
 
 Example of an protein sequence with 330 amino acids: 
 ```MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGGKLSDGHRHDVRAPDYDDWSTPSELGHAGLNGDILVWNPVLEDAFELSSMGIRVDADTLKHQLALTGDEDRLELEWHQALLRGEMPQTIGGGIGQSRLTMLLLQLPHIGQVQAGVWPAAVRESVPSLL```
+
+### Welcome to the 3D world
 
 <p align="center"><img aligh="left" src= "https://cdn.kastatic.org/ka-perseus-images/71225d815cafcc09102504abdf4e10927283be98.png" alt="Protein Folding" width=300></p>
 
@@ -31,7 +35,6 @@ The Anfinsen experiment, showing that the structural characteristics of a protei
 ##  DESCRIPTION
 <hr>
 
-The protein structure prediction problem is the problem of determining the native structure of a protein, given its sequence of amino acids.<br>
 So for the current project we aim to ouput the secondary structure of the protein depending on the amino acid sequence.So for the problem we are currently using the dataset from the DTU bioinformatics institute<br>
 <a href="http://www.cbs.dtu.dk/services/NetSurfP/">Train data</a>
 the model architecutre was based on the bi directional LSTM and for more information do read the paper
@@ -45,10 +48,7 @@ The 3 main secondary structures used for classification are :
 <li> E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
 <li> C = coil (residues which are not in any of the above conformations).
   
- ## PROBLEM STATEMENT
-  <hr>
- 
- implement a model which would provide good accuracy for converting the amino acid sequence into their respective secondary structures.
+
  
 ## IMPLEMENTATION
 
