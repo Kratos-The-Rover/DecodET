@@ -1,4 +1,4 @@
-![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-red.png)<br>
+![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-greeb.png)<br>
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be by computational biologists</I>
 # DecodET: The protein structure generator
