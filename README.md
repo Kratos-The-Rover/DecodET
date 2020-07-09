@@ -15,11 +15,11 @@ git remote add origin <link or ssh>
 git push --set-upstream origin master
 
 ```
-<hr>
+
 
 ##  DESCRIPTION
-
 <hr>
+
 The protein structure prediction problem is the problem of determining the native structure of a protein, given its sequence of amino acids.<br>
 So for the current project we aim to ouput the secondary structure of the protein depending on the amino acid sequence.So for the problem we are currently using the dataset from the DTU bioinformatics institute<br>
 <a href="http://www.cbs.dtu.dk/services/NetSurfP/">Train data</a>
@@ -33,16 +33,12 @@ The 3 main secondary structures used for classification are :
 <li> H = 4-turn helix (α helix). Minimum length 4 residues.
 <li> E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
 <li> C = coil (residues which are not in any of the above conformations).
- <hr>
   
  ## PROBLEM STATEMENT
-  
   <hr>
  
  implement a model which would provide good accuracy for converting the amino acid sequence into their respective secondary structures.
  
-<hr>
-
 ## IMPLEMENTATION
 
 <hr>
