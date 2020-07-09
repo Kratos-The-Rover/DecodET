@@ -1,5 +1,6 @@
-[![License: TAPE](https://github.com/songlab-cal/tape/workflows/Build/badge.svg
-[![dataset](http://www.cbs.dtu.dk/services/NetSurfP/)
+
+![](https://github.com/songlab-cal/tape/workflows/Build/badge.svg)
+![](http://www.cbs.dtu.dk/services/NetSurfP/)
 # DecodET
 
 ## setting up git
