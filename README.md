@@ -5,8 +5,8 @@
 # DecodET
 <hr>
 
-## BIO F111: A 60 minute crash course to get up to speed
-The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
+## BIO F111: A 60 minute crash course to get you up to speed
+
 Amino acids play central roles both as building blocks of proteins and as intermediates in metabolism. The 20 amino acids that are found within proteins convey a vast array of information.<br>
 Each amino acid is encoded as a single letter which can be referred from the image given
 <center><img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Image" height="500" width="500"></center>
@@ -15,6 +15,9 @@ For more information realted to amino acids and proteins refer to the below link
 <a href="https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be">Protein folding problem</a><br>
 <a href="https://youtu.be/cAJQbSLlonI">Protein and machine learning</a><br>
 <a href="https://www.youtube.com/watch?v=q6Kyvy1zLwQ">BERT meets biology</a><br>
+
+The Anfinsen experiment, showing that the structural characteristics of a protein are encoded in its primary sequence alone, is more than 50 years old.1 As a practical application of it, several methods have been developed over the last decades to predict from sequence only several protein structural features, including solvent accessibility, 2–8 secondary structure, backbone geometry, and disorder.<br>
+
 <br>
 
 ##  DESCRIPTION
