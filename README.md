@@ -1,20 +1,19 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-red.png)<br>
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be by computational biologists</I>
-# DecodET: The protein structure predictor
+# DecodET: The protein structure generator
 
 ## Problem statement
-Protein sequencing is relatively much easier and cheaper to perform due to new technologies. But, with just a sequence we won't be able to determine the function of a protein. Protein structure determination is almost a necessary step in finding its function and even to engineer new proteins for varous applications. Several methods are currently used to determine the 3D structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. Enter, Computational Biology and Machine learning.
+Protein sequencing is relatively much easier and cheaper to perform due to new technologies. But, with just a sequence we won't be able to determine the function of a protein. Protein structure determination is almost a necessary step in finding its function and even to engineer new proteins for varous applications. Several methods are currently used to determine the 3D structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. Enter, Computational Biology and Machine learning. We need to build a Deep Learning model which takes a protein sequence (fasta format, see below) and gives a 3D structure (with coordinates of each amino acid in the protein, angles between the bonds, etc.
   
 ## BIO F111: A 5 minute crash course to get you up to speed
-
 Amino acids are organic compounds that combine to form proteins. Amino acids and proteins are the building blocks of life. The 20 amino acids that are found within proteins convey a vast array of information. Each amino acid is represented as a single letter as shown below. 
 
 <p align="center">
 <img src= "https://i.pinimg.com/originals/57/fd/a8/57fda8cac0f5bfdabd2dfbe843ec93c2.png" alt="Amino acid codes" width=300>
 </p><br>
 
-Example of an protein sequence with 330 amino acids: 
+Example of an protein sequence with 330 amino acids (This is called the fasta format, in the realm of Computational Biology): 
 ```
 MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQTLGQHDFSAGEGLYTHMKALRPDEDRLSPLHSVYVDQWDWERVMGDGERQFSTLKSTVEAIWAGIKATEAAVSEEFGLAPFLPDQIHFVHSQELLSRYPDLDAKGRERAIAKDLGAVFLVGIGGKLSDGHRHDVRAPDYDDWSTPSELGHAGLNGDILVWNPVLEDAFELSSMGIRVDADTLKHQLALTGDEDRLELEWHQALLRGEMPQTIGGGIGQSRLTMLLLQLPHIGQVQAGVWPAAVRESVPSLL
 ```
@@ -25,7 +24,7 @@ MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQT
 
 Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
-##  DESCRIPTION
+##  Dataset
 <hr>
 
 So for the current project we aim to ouput the secondary structure of the protein depending on the amino acid sequence.So for the problem we are currently using the dataset from the DTU bioinformatics institute<br>
@@ -95,7 +94,7 @@ and it returns a 768 vectore which should then be passes into a model classifier
 it should predict the secondary structure for each of the amino acids.For example the secondary structure for each of the amino acids given above are
 
 
-### Git setup cheatcode
+### Git cheatcode
 
 ```
 
