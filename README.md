@@ -24,9 +24,12 @@ MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQT
 
 Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
-## NetSurfP-2.0
-the model architecutre was based on the bi directional LSTM and for more information do read the paper
-Morever the NETSURF implements the blossom matrix for feature extraction from the sequence of amino acids.But recent progress in the field of Natural Language Processing has enabled us to get the same results using BERT Models.A recent 2019 paper using BERT models to get the encoding for each amino acids and it was shown to be similar to the BLOSSOM matrix 
+## NetSurfP-2.0: The Baseline
+The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674) model architecture is based on Bi-directional LSTM. NetSurfP-2.0 implements the blossom matrix for feature extraction from the sequence of amino acids. But recent progress in the field of Natural Language Processing like Google's BERT has opened up better ways to extract features. 
+
+## DecodETv1: The plan
+
+A recent 2019 paper using BERT models to get the encoding for each amino acids and it was shown to be similar to the BLOSSOM matrix Read the paper for better understanding. 
 <a href="https://arxiv.org/abs/2006.15222">BERTOLOGY</a>
 Hence the pre trained data for creating the sentence encoding for each amino acid is provided in the TAPE paper and we use the pretrained BERT model for creating the encoding of the amino acid sequence and implement a model for classifying it into the secondary structures 
 <a href="https://arxiv.org/abs/1906.08230">TAPE</a>
@@ -35,8 +38,6 @@ The 3 main secondary structures used for classification are :
 <li> E = extended strand in parallel and/or anti-parallel β-sheet conformation. Min length 2 residues.
 <li> C = coil (residues which are not in any of the above conformations).
   
-
-
 ##  Dataset
 
 We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](http://www.cbs.dtu.dk/services/NetSurfP/). The training set is represented this way: Raw data is given in Numpy (Python) compressed files with an array of pdb/chain ids (pdbids) and a 3-dimensional array (of shape ```(10848, 1632, 68)```) of input and output features. First dimension is protein samples, second dimension is sequence position and third dimension is input features. There are ```10848``` different protein sequences and largest sequence is ```1632``` amino acids long. And, each amino acid has the following data:
@@ -85,16 +86,3 @@ pooled_output = output[1]
 ```
 and it returns a 768 vectore which should then be passes into a model classifier which has 3 classes H,E and C
 it should predict the secondary structure for each of the amino acids.For example the secondary structure for each of the amino acids given above are
-
-
-### Git cheatcode
-
-```
-
-git init
-git add <file>
-git commit -m "message"
-git remote add origin <link or ssh>
-git push --set-upstream origin master
-
-```
