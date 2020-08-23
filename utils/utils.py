@@ -60,7 +60,7 @@ def Predict(seq, model, vocab, ngrams, device):
     print(tokenizer)
     with torch.no_grad():
         sequence = torch.tensor([[[vocab[token]
-                                for token in ngrams_iterator(tokenizer, ngrams)]]])
+                                for token in tokenizer]]])
         sequence.to(device)
         output = model(sequence, np.array(seq.split()), torch.tensor([0]).to(device))
         return output.argmax(1).item() + 1
