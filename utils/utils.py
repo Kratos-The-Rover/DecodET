@@ -2,7 +2,6 @@ import torch
 from torch import nn
 import time
 import numpy as np
-from torchtext.data.utils import ngrams_iterator
 
 def train(model, iterator, optimizer, criterion, clip):
     model.train()
