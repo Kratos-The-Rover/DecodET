@@ -24,6 +24,7 @@ def Tokenizer(path='dataset/', vocab=False):
                                         fields=fields)
     if vocab==False:
         print('Building Vocabulary...')
+        
     seq.build_vocab(train_data,
                 max_size=20000,
                 min_freq=1)

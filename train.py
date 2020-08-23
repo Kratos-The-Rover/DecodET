@@ -29,6 +29,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 train_iterator, val_iterator, test_iterator = Iterator(device=device, batch=BATCH_SIZE)
 model = Seq2Seq(enc, dec, device).to(device)
+model.load_state_dict(torch.load('weights/' + 'epoch_100.pt'))
 
 optimizer = torch.optim.Adam(model.parameters(),lr=0.001)
 criterion = nn.CrossEntropyLoss(ignore_index = TRG_PAD_IDX)
