@@ -1,8 +1,24 @@
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)![maintained](http://img.shields.io/badge/status-maintained-greeb.png)<br>
 ![](http://www.cbs.dtu.dk/services/NetSurfP/)<br>
 <I> The next revolution in biology will be by computational biologists</I>
+
+
 # DecodET: The protein structure generator
 In collaboration with Symbionts, Dept. of Biological Sciences, BITS Goa and SAiDL (Society for Artificial Intelligence and Deep Learning)
+
+## DecodET v0.1: Secondary structure prediction
+
+This version is capable of accurately predicting the secondary structure of a protein (FASTA sequence.)
+
+Example of a FASTA sequence: https://www.rcsb.org/fasta/entry/1BRX/display
+
+The FASTA sequence is converted into words of 3 amino acids each and passed into a Bi-LSTM translation model. 
+
+### Instructions:
+
+1. Clone the repo
+2. Use `predict.py` to test the pre-trained model. The weights of the model is provided in the `/weights` folder.
+3. Use `train.py` to train the model. The dataset (train, test, val) needs to be placed in the `/dataset` folder in `.csv` format. 
 
 ## Problem statement
 Protein sequencing is relatively much easier and cheaper to perform due to new technologies. But, with just a sequence we won't be able to determine the function of a protein. Protein structure determination is almost a necessary step in finding its function and even to engineer new proteins for varous applications. Several methods are currently used to determine the 3D structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. Enter, Computational Biology and Machine learning. We need to build a Deep Learning model which takes a protein sequence (fasta format, see below) and gives a 3D structure (with coordinates of each amino acid in the protein, angles between the bonds, etc.
@@ -25,10 +41,10 @@ MKTAYIAKQRQISFVKSHFSRQLEERLGLIEVQAPILSRVGDGTQDNLSGAEKAVQVKVKALPDAQFEVVHSLAKWKRQT
 
 Several methods are currently used to determine the structure of a protein, including X-ray crystallography, NMR spectroscopy, and Electron microscopy. They are extremely time consuming and expensive. This is where Machine Learning and Deep Learning comes into the picture. Predicting 3D structure of protein from its amino acid sequence is one of the most important unsolved problems in biophysics and computational biology. Watch these interesting videos to gain more insight into the problem we are trying to solve: [TedX: The protein folding problem](https://www.youtube.com/watch?v=zm-3kovWpNQ&feature=youtu.be), [The protein folding revolution: Proteins and AI](https://youtu.be/cAJQbSLlonI), [BERTology: BERT meets biology](https://www.youtube.com/watch?v=q6Kyvy1zLwQ) and [Khanacademy: Protein basics](https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure).
 
-## NetSurfP-2.0: The Baseline model
+## NetSurfP-2.0: The Baseline model (Depreciated)
 The [NetSurfP-2.0 paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/prot.25674)'s model architecture is based on Bi-Directional LSTM. NetSurfP-2.0 implements the blossom matrix for feature extraction from the sequence of amino acids. But recent progress in the field of Natural Language Processing like Google's BERT has opened up better ways to extract features. 
 
-## DecodETv0.1
+## DecodETv0.1 (Complete)
 <p align="center">
 <img src= "https://github.com/Kratos-The-Rover/DecodET/blob/master/str.PNG" alt="Amino acid codes" width=300>
 </p><br>
@@ -51,7 +67,7 @@ CCCCHHHHHHHHHHHHHHHHHHHHHHHCEEECCCCCEEECCCCCCCCCCCCCCCCEECCCCCCCCCEEECCCCCCHHHHH
 You have the choice to help improve our model and help fix issues. We would rather have you work on novel models (not limiting to NLP) and compete with our model! We will be updating pending work, issues on our model soon. Meanwhile, it is up to you to find more papers and models. Novel models are most welcome. 
 
   
-##  Dataset
+##  Dataset (Depreciated)
 
 We are borrowing the dataset from DTU Bioinformatics Institute's [NetSurfP-2.0](http://www.cbs.dtu.dk/services/NetSurfP/). The training set is represented this way: Raw data is given in Numpy (Python) compressed files with an array of pdb/chain ids (pdbids) and a 3-dimensional array (of shape ```(10848, 1632, 68)```) of input and output features. First dimension is protein samples, second dimension is sequence position and third dimension is input features. There are ```10848``` different protein sequences and largest sequence is ```1632``` amino acids long. And, each amino acid has the following data:
 
