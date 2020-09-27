@@ -45,6 +45,6 @@ def Iterator(path='dataset/', device='cuda', batch=64):
                                                     batch_size=batch,
                                                     device=device,
                                                     sort_key=lambda x: len(x.seq),
-                                                    sort_within_batch=True)
+                                                    sort_within_batch=False)
     print('Creating batches...')
     return train_iterator, val_iterator, test_iterator

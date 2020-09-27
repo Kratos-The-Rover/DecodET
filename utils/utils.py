@@ -54,15 +54,35 @@ def evaluate(model, iterator, criterion):
             
     return epoch_loss / len(iterator)
 
-def Predict(seq, model, vocab, ngrams, device):
-    tokenizer = np.array([seq[i:i+3] for i in range(len(seq))])
-    print(tokenizer)
-    with torch.no_grad():
-        sequence = torch.tensor([[[vocab[token]
-                                for token in tokenizer]]])
-        sequence.to(device)
-        output = model(sequence, np.array(seq.split()), torch.tensor([0]).to(device))
-        return output.argmax(1).item() + 1
+def Predict(sequence, model, vocab, ss, ngrams, device):
+    tokenizer = np.array([sequence[i:i+3] for i in range(len(sequence))])
+    input_seq = []
+    pred = []
+    ss_pred = ''
+    input_struct = []
+    input_seq.append(2)
+    input_struct.append(2)
+    for i in range(len(tokenizer)):
+        input_seq.append(vocab[tokenizer[i]])
+        input_struct.append(2)
+    input_seq.append(3)
+    input_struct.append(2)
+
+    input_seq_T = torch.FloatTensor(input_seq).to(torch.int64)
+    input_struct_T = torch.FloatTensor(input_struct).to(torch.int64)
+    input_seq_Ts = torch.unsqueeze(input_seq_T,1).to(device)
+    input_strcut_Ts = torch.unsqueeze(input_struct_T,1).to(device)
+
+    output = model(input_seq_Ts, input_strcut_Ts, 1)
+    output_dim = output.shape[-1]
+    output = output[1:].view(-1, output_dim)
+
+    for j in range(1,len(output)-1):
+        pred.append([k for k, v in ss.items() if v == torch.argmax(output[j]).item()])
+        ss_pred+=pred[j-1][0]
+
+    print(ss_pred) 
+
 
 def epoch_time(start_time, end_time):
     elapsed_time = end_time - start_time

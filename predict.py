@@ -24,11 +24,12 @@ dec = Decoder(OUTPUT_DIM, DEC_EMB_DIM, HID_DIM, N_LAYERS, DEC_DROPOUT)
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = 'cpu'
 
 model = Seq2Seq(enc, dec, device)
 model.load_state_dict(torch.load('weights/' + 'epoch_50.pt'))
 model.to(device)
-
 sequence = input("Enter the protein sequence: ")
 vocab = SEQ.vocab.stoi
-Predict(sequence, model, vocab, 1, device)
+ss = SS.vocab.stoi
+Predict(sequence, model, vocab, ss, 1, device)
